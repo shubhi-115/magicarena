@@ -2,6 +2,7 @@ package Controller;
 
 import exception.PlayerNotSetException;
 import model.Game;
+import model.GameStatus;
 import model.Player;
 
 public class GameController {
@@ -12,5 +13,11 @@ public class GameController {
                 .build();
 
         return game;
+    }
+    public GameStatus getGameStatus(Game game) {
+        return game.getGameStatus();
+    }
+    public void makeMove(Game game) {
+        game.makeMove();
     }
 }
