@@ -28,6 +28,9 @@ public class Player {
     public String getName() {
         return name;
     }
+    public static Builder create(){
+        return new Builder();
+    }
     public static class Builder{
         private int health;
         private int strength;

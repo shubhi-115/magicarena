@@ -9,6 +9,9 @@ public class Game {
     private Game() {
         this.players = new ArrayList<>();
     }
+    public static Builder create() {
+        return new Builder();
+    }
     public static class Builder {
         private Player player1;
         private Player player2;
