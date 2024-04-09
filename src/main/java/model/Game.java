@@ -23,7 +23,6 @@ public class Game {
     }
 
     public void makeMove() {
-        this.lastPlayerIndex = 1 - lastPlayerIndex;
 
         Player attacker = players.get(lastPlayerIndex);
         Player defender = players.get(1 - lastPlayerIndex);
@@ -52,6 +51,7 @@ public class Game {
             setPlayerStatus(attacker);
             setPlayerStatus(defender);
         }
+        this.lastPlayerIndex = 1 - lastPlayerIndex;
         System.out.println("--------------------------------------------------------");
     }
 
